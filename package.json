@@ -1,15 +1,66 @@
 {
-  "name": "electron-tray-app-example",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "electron": "^6.0.0"
-  }
+    "name": "kmoz-openvpn-client",
+    "version": "1.0.0",
+    "description": "The quickest way to create an electron app located in the menu bar. This also works on windows and changes its position according to the position of the taskbar.",
+    "main": "main.js",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "dev": "concurrently -k \"BROWSER=none npm start\" \"npm:electron\"",
+        "electron": "wait-on tcp:3000 && electron .",
+        "postinstall": "patch-package"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@amilajack/openvpn-bin": "^0.0.0",
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^13.0.1",
+        "@testing-library/user-event": "^13.5.0",
+        "electron-sudo": "^4.0.12",
+        "hamburger-react": "^2.5.0",
+        "i18next": "^21.6.16",
+        "localStorage": "^1.0.4",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-i18next": "^11.16.6",
+        "react-scripts": "5.0.1",
+        "react-spring": "^9.4.4",
+        "styled-components": "^5.3.5",
+        "sudo": "^1.0.3",
+        "sudo-prompt": "^9.2.1",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "concurrently": "^7.1.0",
+        "electron": "^6.0.0",
+        "electron-is-dev": "^2.0.0",
+        "patch-package": "^6.4.7",
+        "wait-on": "^6.0.1"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "resolutions": {
+        "styled-components": "^5"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KM8Oz/vpn-world-desktop.git"
+    },
+    "bugs": {
+        "url": "https://github.com/KM8Oz/vpn-world-desktop/issues"
+    },
+    "homepage": "https://github.com/KM8Oz/vpn-world-desktop#readme"
 }
