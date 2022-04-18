@@ -19,7 +19,7 @@
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^13.0.1",
         "@testing-library/user-event": "^13.5.0",
-        "electron-sudo": "^4.0.12",
+        "electron-store": "^8.0.1",
         "hamburger-react": "^2.5.0",
         "i18next": "^21.6.16",
         "localStorage": "^1.0.4",
@@ -28,8 +28,8 @@
         "react-i18next": "^11.16.6",
         "react-scripts": "5.0.1",
         "react-spring": "^9.4.4",
+        "semver": "^7.3.7",
         "styled-components": "^5.3.5",
-        "sudo": "^1.0.3",
         "sudo-prompt": "^9.2.1",
         "web-vitals": "^2.1.4"
     },
@@ -58,9 +58,5 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/KM8Oz/vpn-world-desktop.git"
-    },
-    "bugs": {
-        "url": "https://github.com/KM8Oz/vpn-world-desktop/issues"
-    },
-    "homepage": "https://github.com/KM8Oz/vpn-world-desktop#readme"
+    }
 }

@@ -1,0 +1,21 @@
+# ninja log v5
+0	52	1650271430775347625	googletest-prefix/src/googletest-stamp/googletest-mkdir	a2d563f6b4841f12
+0	52	1650271430775347625	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir	a2d563f6b4841f12
+52	11258	1650271441981500000	googletest-prefix/src/googletest-stamp/googletest-download	74be358a573f88be
+52	11258	1650271441981500000	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download	74be358a573f88be
+11258	11342	0	googletest-prefix/src/googletest-stamp/googletest-update	be5e9cb2287f759c
+11258	11342	0	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update	be5e9cb2287f759c
+11342	11399	1650271442121140453	googletest-prefix/src/googletest-stamp/googletest-patch	b387b3c72868bbcc
+11342	11399	1650271442121140453	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch	b387b3c72868bbcc
+11399	11452	1650271442175720588	googletest-prefix/src/googletest-stamp/googletest-configure	76688e30528116f8
+11399	11452	1650271442175720588	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure	76688e30528116f8
+11453	11508	1650271442231069597	googletest-prefix/src/googletest-stamp/googletest-build	33bf0e7772a792a6
+11453	11508	1650271442231069597	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build	33bf0e7772a792a6
+11508	11554	1650271442276793204	googletest-prefix/src/googletest-stamp/googletest-install	2e948f561d2c56c
+11508	11554	1650271442276793204	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install	2e948f561d2c56c
+11554	11596	1650271442319135155	googletest-prefix/src/googletest-stamp/googletest-test	69e86ab79bc6a26
+11554	11596	1650271442319135155	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test	69e86ab79bc6a26
+11596	11659	1650271442382319346	CMakeFiles/googletest-complete	d6d2b23c7e8f7022
+11596	11659	1650271442382319346	googletest-prefix/src/googletest-stamp/googletest-done	d6d2b23c7e8f7022
+11596	11659	1650271442382319346	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/CMakeFiles/googletest-complete	d6d2b23c7e8f7022
+11596	11659	1650271442382319346	/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-download/googletest-prefix/src/googletest-stamp/googletest-done	d6d2b23c7e8f7022

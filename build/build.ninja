@@ -1,0 +1,1356 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: openvpn
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/novyjpolzovatel/Desktop/vpndesktop/build/
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target openvpn
+
+
+#############################################
+# Order-only phony target for openvpn
+
+build cmake_object_order_depends_target_openvpn: phony || CMakeFiles/openvpn.dir
+
+build CMakeFiles/openvpn.dir/cpp/module.cc.o: CXX_COMPILER__openvpn_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/module.cc || cmake_object_order_depends_target_openvpn
+  DEFINES = -DNAPI_VERSION=3 -Dopenvpn_EXPORTS
+  DEP_FILE = CMakeFiles/openvpn.dir/cpp/module.cc.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -fPIC -std=gnu++11
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/node_modules/node-addon-api
+  OBJECT_DIR = CMakeFiles/openvpn.dir
+  OBJECT_FILE_DIR = CMakeFiles/openvpn.dir/cpp
+  TARGET_COMPILE_PDB = CMakeFiles/openvpn.dir/
+  TARGET_PDB = openvpn.pdb
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target openvpn
+
+
+#############################################
+# Link the shared library openvpn.node
+
+build openvpn.node: CXX_SHARED_LIBRARY_LINKER__openvpn_Debug CMakeFiles/openvpn.dir/cpp/module.cc.o
+  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  INSTALLNAME_DIR = @rpath/
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/openvpn.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = openvpn.node
+  SONAME_FLAG = -install_name
+  TARGET_COMPILE_PDB = CMakeFiles/openvpn.dir/
+  TARGET_FILE = openvpn.node
+  TARGET_PDB = openvpn.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build && /usr/local/Cellar/cmake/3.23.0/bin/ccmake -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build && /usr/local/Cellar/cmake/3.23.0/bin/cmake --regenerate-during-build -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build && /usr/local/Cellar/cmake/3.23.0/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build cpp/openvpn/client/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/client && /usr/local/Cellar/cmake/3.23.0/bin/ccmake -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/client/edit_cache: phony cpp/openvpn/client/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cpp/openvpn/client/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/client && /usr/local/Cellar/cmake/3.23.0/bin/cmake --regenerate-during-build -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/client/rebuild_cache: phony cpp/openvpn/client/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cpp/openvpn/client/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cpp/openvpn/client/CMakeFiles/install.util: CUSTOM_COMMAND cpp/openvpn/client/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/client && /usr/local/Cellar/cmake/3.23.0/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/client/install: phony cpp/openvpn/client/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cpp/openvpn/client/CMakeFiles/install/local.util: CUSTOM_COMMAND cpp/openvpn/client/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/client && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/client/install/local: phony cpp/openvpn/client/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cpp/openvpn/client/CMakeFiles/install/strip.util: CUSTOM_COMMAND cpp/openvpn/client/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/client && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/client/install/strip: phony cpp/openvpn/client/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target coreUnitTests
+
+
+#############################################
+# Order-only phony target for coreUnitTests
+
+build cmake_object_order_depends_target_coreUnitTests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/core_tests.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/core_tests.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/core_tests.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_route_emulation.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_route_emulation.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_route_emulation.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_log.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_log.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_log.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_comp.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_comp.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_comp.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_b64.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_b64.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_b64.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_verify_x509_name.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_verify_x509_name.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_verify_x509_name.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_ssl.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_ssl.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_ssl.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_continuation.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_continuation.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_continuation.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_crypto.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_crypto.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_crypto.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_optfilt.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_optfilt.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_optfilt.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_pktstream.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_pktstream.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_pktstream.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_remotelist.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_remotelist.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_remotelist.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_http_proxy.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_http_proxy.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_http_proxy.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_peer_fingerprint.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_peer_fingerprint.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_peer_fingerprint.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_safestr.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_safestr.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_safestr.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_dns.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_dns.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_dns.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_openssl_x509certinfo.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_openssl_x509certinfo.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_openssl_x509certinfo.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_buffer_ip.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_buffer_ip.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_buffer_ip.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+build cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_cpu_time.cpp.o: CXX_COMPILER__coreUnitTests_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/test_cpu_time.cpp || cmake_object_order_depends_target_coreUnitTests
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_FORCE_TUN_NULL -DUNITTEST_SOURCE_DIR=\"/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/\" -DUNIT_TEST -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_cpu_time.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target coreUnitTests
+
+
+#############################################
+# Link the executable cpp/openvpn/test/unittests/coreUnitTests
+
+build cpp/openvpn/test/unittests/coreUnitTests: CXX_EXECUTABLE_LINKER__coreUnitTests_Debug cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/core_tests.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_route_emulation.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_log.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_comp.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_b64.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_verify_x509_name.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_ssl.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_continuation.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_crypto.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_optfilt.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_pktstream.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_remotelist.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_http_proxy.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_peer_fingerprint.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_safestr.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_dns.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_openssl_x509certinfo.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_buffer_ip.cpp.o cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/test_cpu_time.cpp.o | /opt/local/libexec/openssl3/lib/libssl.dylib /opt/local/libexec/openssl3/lib/libssl.dylib /usr/local/lib/liblzo2.dylib /usr/local/lib/liblz4.dylib lib/libgtest_maind.a /usr/local/lib/liblzo2.dylib /usr/local/lib/liblz4.dylib /opt/local/libexec/openssl3/lib/libcrypto.dylib lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LINK_LIBRARIES = -framework  CoreFoundation  -framework  IOKit  -framework  CoreServices  -framework  SystemConfiguration  /opt/local/libexec/openssl3/lib/libssl.dylib  -lpthread  /opt/local/libexec/openssl3/lib/libssl.dylib  /usr/local/lib/liblzo2.dylib  /usr/local/lib/liblz4.dylib  lib/libgtest_maind.a  /usr/local/lib/liblzo2.dylib  /usr/local/lib/liblz4.dylib  /opt/local/libexec/openssl3/lib/libcrypto.dylib  lib/libgtestd.a
+  OBJECT_DIR = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = cpp/openvpn/test/unittests/CMakeFiles/coreUnitTests.dir/
+  TARGET_FILE = cpp/openvpn/test/unittests/coreUnitTests
+  TARGET_PDB = cpp/openvpn/test/unittests/coreUnitTests.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build cpp/openvpn/test/unittests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests && /usr/local/Cellar/cmake/3.23.0/bin/ccmake -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/edit_cache: phony cpp/openvpn/test/unittests/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cpp/openvpn/test/unittests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests && /usr/local/Cellar/cmake/3.23.0/bin/cmake --regenerate-during-build -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/rebuild_cache: phony cpp/openvpn/test/unittests/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cpp/openvpn/test/unittests/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cpp/openvpn/test/unittests/CMakeFiles/install.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests && /usr/local/Cellar/cmake/3.23.0/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/install: phony cpp/openvpn/test/unittests/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cpp/openvpn/test/unittests/CMakeFiles/install/local.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/install/local: phony cpp/openvpn/test/unittests/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cpp/openvpn/test/unittests/CMakeFiles/install/strip.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/install/strip: phony cpp/openvpn/test/unittests/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/dlgoogletest.cmake
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build cpp/openvpn/test/unittests/googletest-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build && /usr/local/Cellar/cmake/3.23.0/bin/ccmake -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/edit_cache: phony cpp/openvpn/test/unittests/googletest-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cpp/openvpn/test/unittests/googletest-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build && /usr/local/Cellar/cmake/3.23.0/bin/cmake --regenerate-during-build -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/rebuild_cache: phony cpp/openvpn/test/unittests/googletest-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cpp/openvpn/test/unittests/googletest-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cpp/openvpn/test/unittests/googletest-build/CMakeFiles/install.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/googletest-build/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build && /usr/local/Cellar/cmake/3.23.0/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/install: phony cpp/openvpn/test/unittests/googletest-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cpp/openvpn/test/unittests/googletest-build/CMakeFiles/install/local.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/googletest-build/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/install/local: phony cpp/openvpn/test/unittests/googletest-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cpp/openvpn/test/unittests/googletest-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/googletest-build/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/install/strip: phony cpp/openvpn/test/unittests/googletest-build/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEFINES = -DNAPI_VERSION=3
+  DEP_FILE = cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googlemock/include -I/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googlemock -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock.dir/src
+  TARGET_COMPILE_PDB = bin/libgmockd.pdb
+  TARGET_PDB = bin/libgmockd.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib/libgmockd.a
+
+build lib/libgmockd.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtestd.a
+  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = bin/libgmockd.pdb
+  TARGET_FILE = lib/libgmockd.a
+  TARGET_PDB = bin/libgmockd.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEFINES = -DNAPI_VERSION=3
+  DEP_FILE = cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++14
+  INCLUDES = -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googlemock/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googlemock -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src
+  TARGET_COMPILE_PDB = bin/libgmock_maind.pdb
+  TARGET_PDB = bin/libgmock_maind.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib/libgmock_maind.a
+
+build lib/libgmock_maind.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmockd.a lib/libgtestd.a
+  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = bin/libgmock_maind.pdb
+  TARGET_FILE = lib/libgmock_maind.a
+  TARGET_PDB = bin/libgmock_maind.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googlemock && /usr/local/Cellar/cmake/3.23.0/bin/ccmake -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/edit_cache: phony cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googlemock && /usr/local/Cellar/cmake/3.23.0/bin/cmake --regenerate-during-build -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/rebuild_cache: phony cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/googletest-build/googlemock/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googlemock && /usr/local/Cellar/cmake/3.23.0/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/install: phony cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/googletest-build/googlemock/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googlemock && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/install/local: phony cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/googletest-build/googlemock/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googlemock && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/install/strip: phony cpp/openvpn/test/unittests/googletest-build/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest.dir
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEFINES = -DNAPI_VERSION=3
+  DEP_FILE = cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -I/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest.dir/src
+  TARGET_COMPILE_PDB = bin/libgtestd.pdb
+  TARGET_PDB = bin/libgtestd.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib/libgtestd.a
+
+build lib/libgtestd.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = bin/libgtestd.pdb
+  TARGET_FILE = lib/libgtestd.a
+  TARGET_PDB = bin/libgtestd.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEFINES = -DNAPI_VERSION=3
+  DEP_FILE = cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -std=c++14
+  INCLUDES = -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include -isystem /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest
+  OBJECT_DIR = cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest_main.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest_main.dir/src
+  TARGET_COMPILE_PDB = bin/libgtest_maind.pdb
+  TARGET_PDB = bin/libgtest_maind.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib/libgtest_maind.a
+
+build lib/libgtest_maind.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtestd.a
+  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/gtest_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = bin/libgtest_maind.pdb
+  TARGET_FILE = lib/libgtest_maind.a
+  TARGET_PDB = bin/libgtest_maind.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest && /usr/local/Cellar/cmake/3.23.0/bin/ccmake -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/edit_cache: phony cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest && /usr/local/Cellar/cmake/3.23.0/bin/cmake --regenerate-during-build -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/rebuild_cache: phony cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/install.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/googletest-build/googletest/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest && /usr/local/Cellar/cmake/3.23.0/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/install: phony cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/googletest-build/googletest/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/install/local: phony cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND cpp/openvpn/test/unittests/googletest-build/googletest/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/install/strip: phony cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ovpncli
+
+
+#############################################
+# Order-only phony target for ovpncli
+
+build cmake_object_order_depends_target_ovpncli: phony || cpp/openvpn/test/ovpncli/CMakeFiles/ovpncli.dir
+
+build cpp/openvpn/test/ovpncli/CMakeFiles/ovpncli.dir/cli.cpp.o: CXX_COMPILER__ovpncli_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/ovpncli/cli.cpp || cmake_object_order_depends_target_ovpncli
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncli.dir/cli.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include
+  OBJECT_DIR = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncli.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncli.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncli.dir/
+  TARGET_PDB = cpp/openvpn/test/ovpncli/ovpncli.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ovpncli
+
+
+#############################################
+# Link the executable cpp/openvpn/test/ovpncli/ovpncli
+
+build cpp/openvpn/test/ovpncli/ovpncli: CXX_EXECUTABLE_LINKER__ovpncli_Debug cpp/openvpn/test/ovpncli/CMakeFiles/ovpncli.dir/cli.cpp.o | /opt/local/libexec/openssl3/lib/libssl.dylib /opt/local/libexec/openssl3/lib/libssl.dylib /usr/local/lib/liblz4.dylib /opt/local/libexec/openssl3/lib/libcrypto.dylib
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LINK_LIBRARIES = -framework  CoreFoundation  -framework  IOKit  -framework  CoreServices  -framework  SystemConfiguration  /opt/local/libexec/openssl3/lib/libssl.dylib  -lpthread  /opt/local/libexec/openssl3/lib/libssl.dylib  /usr/local/lib/liblz4.dylib  /opt/local/libexec/openssl3/lib/libcrypto.dylib
+  OBJECT_DIR = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncli.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncli.dir/
+  TARGET_FILE = cpp/openvpn/test/ovpncli/ovpncli
+  TARGET_PDB = cpp/openvpn/test/ovpncli/ovpncli.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ovpncliagent
+
+
+#############################################
+# Order-only phony target for ovpncliagent
+
+build cmake_object_order_depends_target_ovpncliagent: phony || cpp/openvpn/test/ovpncli/CMakeFiles/ovpncliagent.dir
+
+build cpp/openvpn/test/ovpncli/CMakeFiles/ovpncliagent.dir/cli.cpp.o: CXX_COMPILER__ovpncliagent_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/ovpncli/cli.cpp || cmake_object_order_depends_target_ovpncliagent
+  DEFINES = -DASIO_STANDALONE -DHAVE_JSONCPP -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DOPENVPN_COMMAND_AGENT -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncliagent.dir/cli.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include
+  OBJECT_DIR = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncliagent.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncliagent.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncliagent.dir/
+  TARGET_PDB = cpp/openvpn/test/ovpncli/ovpncliagent.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ovpncliagent
+
+
+#############################################
+# Link the executable cpp/openvpn/test/ovpncli/ovpncliagent
+
+build cpp/openvpn/test/ovpncli/ovpncliagent: CXX_EXECUTABLE_LINKER__ovpncliagent_Debug cpp/openvpn/test/ovpncli/CMakeFiles/ovpncliagent.dir/cli.cpp.o | /opt/local/libexec/openssl3/lib/libssl.dylib /opt/local/libexec/openssl3/lib/libssl.dylib /usr/local/lib/liblz4.dylib /opt/local/libexec/openssl3/lib/libcrypto.dylib
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LINK_LIBRARIES = -framework  CoreFoundation  -framework  IOKit  -framework  CoreServices  -framework  SystemConfiguration  /opt/local/libexec/openssl3/lib/libssl.dylib  -lpthread  /opt/local/libexec/openssl3/lib/libssl.dylib  /usr/local/lib/liblz4.dylib  /opt/local/libexec/openssl3/lib/libcrypto.dylib
+  OBJECT_DIR = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncliagent.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = cpp/openvpn/test/ovpncli/CMakeFiles/ovpncliagent.dir/
+  TARGET_FILE = cpp/openvpn/test/ovpncli/ovpncliagent
+  TARGET_PDB = cpp/openvpn/test/ovpncli/ovpncliagent.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build cpp/openvpn/test/ovpncli/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ovpncli && /usr/local/Cellar/cmake/3.23.0/bin/ccmake -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ovpncli/edit_cache: phony cpp/openvpn/test/ovpncli/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cpp/openvpn/test/ovpncli/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ovpncli && /usr/local/Cellar/cmake/3.23.0/bin/cmake --regenerate-during-build -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ovpncli/rebuild_cache: phony cpp/openvpn/test/ovpncli/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cpp/openvpn/test/ovpncli/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cpp/openvpn/test/ovpncli/CMakeFiles/install.util: CUSTOM_COMMAND cpp/openvpn/test/ovpncli/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ovpncli && /usr/local/Cellar/cmake/3.23.0/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ovpncli/install: phony cpp/openvpn/test/ovpncli/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cpp/openvpn/test/ovpncli/CMakeFiles/install/local.util: CUSTOM_COMMAND cpp/openvpn/test/ovpncli/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ovpncli && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ovpncli/install/local: phony cpp/openvpn/test/ovpncli/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cpp/openvpn/test/ovpncli/CMakeFiles/install/strip.util: CUSTOM_COMMAND cpp/openvpn/test/ovpncli/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ovpncli && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ovpncli/install/strip: phony cpp/openvpn/test/ovpncli/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target proto
+
+
+#############################################
+# Order-only phony target for proto
+
+build cmake_object_order_depends_target_proto: phony || cpp/openvpn/test/ssl/CMakeFiles/proto.dir
+
+build cpp/openvpn/test/ssl/CMakeFiles/proto.dir/proto.cpp.o: CXX_COMPILER__proto_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/ssl/proto.cpp || cmake_object_order_depends_target_proto
+  DEFINES = -DASIO_STANDALONE -DHAVE_LZ4 -DITER=1000000 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DN_THREADS=1 -DRENEG=900 -DSITER=1 -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/test/ssl/CMakeFiles/proto.dir/proto.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -Wno-unused-private-field -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include
+  OBJECT_DIR = cpp/openvpn/test/ssl/CMakeFiles/proto.dir
+  OBJECT_FILE_DIR = cpp/openvpn/test/ssl/CMakeFiles/proto.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/test/ssl/CMakeFiles/proto.dir/
+  TARGET_PDB = cpp/openvpn/test/ssl/proto.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target proto
+
+
+#############################################
+# Link the executable cpp/openvpn/test/ssl/proto
+
+build cpp/openvpn/test/ssl/proto: CXX_EXECUTABLE_LINKER__proto_Debug cpp/openvpn/test/ssl/CMakeFiles/proto.dir/proto.cpp.o | /opt/local/libexec/openssl3/lib/libssl.dylib /opt/local/libexec/openssl3/lib/libssl.dylib /usr/local/lib/liblz4.dylib /opt/local/libexec/openssl3/lib/libcrypto.dylib
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LINK_LIBRARIES = -framework  CoreFoundation  -framework  IOKit  -framework  CoreServices  -framework  SystemConfiguration  /opt/local/libexec/openssl3/lib/libssl.dylib  -lpthread  /opt/local/libexec/openssl3/lib/libssl.dylib  /usr/local/lib/liblz4.dylib  /opt/local/libexec/openssl3/lib/libcrypto.dylib
+  OBJECT_DIR = cpp/openvpn/test/ssl/CMakeFiles/proto.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = cpp/openvpn/test/ssl/CMakeFiles/proto.dir/
+  TARGET_FILE = cpp/openvpn/test/ssl/proto
+  TARGET_PDB = cpp/openvpn/test/ssl/proto.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build cpp/openvpn/test/ssl/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ssl && /usr/local/Cellar/cmake/3.23.0/bin/ccmake -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ssl/edit_cache: phony cpp/openvpn/test/ssl/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cpp/openvpn/test/ssl/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ssl && /usr/local/Cellar/cmake/3.23.0/bin/cmake --regenerate-during-build -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ssl/rebuild_cache: phony cpp/openvpn/test/ssl/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cpp/openvpn/test/ssl/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cpp/openvpn/test/ssl/CMakeFiles/install.util: CUSTOM_COMMAND cpp/openvpn/test/ssl/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ssl && /usr/local/Cellar/cmake/3.23.0/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ssl/install: phony cpp/openvpn/test/ssl/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cpp/openvpn/test/ssl/CMakeFiles/install/local.util: CUSTOM_COMMAND cpp/openvpn/test/ssl/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ssl && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ssl/install/local: phony cpp/openvpn/test/ssl/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cpp/openvpn/test/ssl/CMakeFiles/install/strip.util: CUSTOM_COMMAND cpp/openvpn/test/ssl/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ssl && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/test/ssl/install/strip: phony cpp/openvpn/test/ssl/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target agent_macos
+
+
+#############################################
+# Order-only phony target for agent_macos
+
+build cmake_object_order_depends_target_agent_macos: phony || cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/agent_macos.dir
+
+build cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/agent_macos.dir/ovpnagent.cpp.o: CXX_COMPILER__agent_macos_Debug /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/openvpn/ovpnagent/mac/ovpnagent.cpp || cmake_object_order_depends_target_agent_macos
+  DEFINES = -DASIO_STANDALONE -DHAVE_JSONCPP -DHAVE_LZ4 -DLZ4_DISABLE_DEPRECATE_WARNINGS -DMBEDTLS_DEPRECATED_REMOVED -DNAPI_VERSION=3 -DUSE_ASIO -DUSE_OPENSSL
+  DEP_FILE = cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/agent_macos.dir/ovpnagent.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wall -Wsign-compare -Wno-deprecated-declarations -std=gnu++14
+  INCLUDES = -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/.. -I/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/../../deps/asio/asio/include -I/usr/local/include -isystem /opt/local/libexec/openssl3/include
+  OBJECT_DIR = cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/agent_macos.dir
+  OBJECT_FILE_DIR = cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/agent_macos.dir
+  TARGET_COMPILE_PDB = cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/agent_macos.dir/
+  TARGET_PDB = cpp/openvpn/openvpn/ovpnagent/mac/agent_macos.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target agent_macos
+
+
+#############################################
+# Link the executable cpp/openvpn/openvpn/ovpnagent/mac/agent_macos
+
+build cpp/openvpn/openvpn/ovpnagent/mac/agent_macos: CXX_EXECUTABLE_LINKER__agent_macos_Debug cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/agent_macos.dir/ovpnagent.cpp.o | /opt/local/libexec/openssl3/lib/libssl.dylib /opt/local/libexec/openssl3/lib/libssl.dylib /usr/local/lib/liblz4.dylib /opt/local/libexec/openssl3/lib/libcrypto.dylib
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LINK_LIBRARIES = -framework  CoreFoundation  -framework  IOKit  -framework  CoreServices  -framework  SystemConfiguration  /opt/local/libexec/openssl3/lib/libssl.dylib  -lpthread  /opt/local/libexec/openssl3/lib/libssl.dylib  /usr/local/lib/liblz4.dylib  /opt/local/libexec/openssl3/lib/libcrypto.dylib
+  OBJECT_DIR = cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/agent_macos.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/agent_macos.dir/
+  TARGET_FILE = cpp/openvpn/openvpn/ovpnagent/mac/agent_macos
+  TARGET_PDB = cpp/openvpn/openvpn/ovpnagent/mac/agent_macos.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/openvpn/ovpnagent/mac && /usr/local/Cellar/cmake/3.23.0/bin/ccmake -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/openvpn/ovpnagent/mac/edit_cache: phony cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/openvpn/ovpnagent/mac && /usr/local/Cellar/cmake/3.23.0/bin/cmake --regenerate-during-build -S/Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn -B/Users/novyjpolzovatel/Desktop/vpndesktop/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/openvpn/ovpnagent/mac/rebuild_cache: phony cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build cpp/openvpn/openvpn/ovpnagent/mac/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/install.util: CUSTOM_COMMAND cpp/openvpn/openvpn/ovpnagent/mac/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/openvpn/ovpnagent/mac && /usr/local/Cellar/cmake/3.23.0/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/openvpn/ovpnagent/mac/install: phony cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/install/local.util: CUSTOM_COMMAND cpp/openvpn/openvpn/ovpnagent/mac/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/openvpn/ovpnagent/mac && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/openvpn/ovpnagent/mac/install/local: phony cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/install/strip.util: CUSTOM_COMMAND cpp/openvpn/openvpn/ovpnagent/mac/all
+  COMMAND = cd /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/openvpn/ovpnagent/mac && /usr/local/Cellar/cmake/3.23.0/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build cpp/openvpn/openvpn/ovpnagent/mac/install/strip: phony cpp/openvpn/openvpn/ovpnagent/mac/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Target aliases.
+
+build agent_macos: phony cpp/openvpn/openvpn/ovpnagent/mac/agent_macos
+
+build coreUnitTests: phony cpp/openvpn/test/unittests/coreUnitTests
+
+build gmock: phony lib/libgmockd.a
+
+build gmock_main: phony lib/libgmock_maind.a
+
+build gtest: phony lib/libgtestd.a
+
+build gtest_main: phony lib/libgtest_maind.a
+
+build libgmock_maind.a: phony lib/libgmock_maind.a
+
+build libgmockd.a: phony lib/libgmockd.a
+
+build libgtest_maind.a: phony lib/libgtest_maind.a
+
+build libgtestd.a: phony lib/libgtestd.a
+
+build openvpn: phony openvpn.node
+
+build ovpncli: phony cpp/openvpn/test/ovpncli/ovpncli
+
+build ovpncliagent: phony cpp/openvpn/test/ovpncli/ovpncliagent
+
+build proto: phony cpp/openvpn/test/ssl/proto
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/novyjpolzovatel/Desktop/vpndesktop/build
+
+build all: phony openvpn.node cpp/openvpn/client/all cpp/openvpn/test/unittests/all cpp/openvpn/test/ovpncli/all cpp/openvpn/test/ssl/all cpp/openvpn/openvpn/ovpnagent/mac/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/client
+
+build cpp/openvpn/client/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/openvpn/ovpnagent/mac
+
+build cpp/openvpn/openvpn/ovpnagent/mac/all: phony cpp/openvpn/openvpn/ovpnagent/mac/agent_macos
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ovpncli
+
+build cpp/openvpn/test/ovpncli/all: phony cpp/openvpn/test/ovpncli/ovpncli cpp/openvpn/test/ovpncli/ovpncliagent
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/ssl
+
+build cpp/openvpn/test/ssl/all: phony cpp/openvpn/test/ssl/proto
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests
+
+build cpp/openvpn/test/unittests/all: phony cpp/openvpn/test/unittests/coreUnitTests
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build
+
+build cpp/openvpn/test/unittests/googletest-build/all: phony cpp/openvpn/test/unittests/googletest-build/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googlemock
+
+build cpp/openvpn/test/unittests/googletest-build/googlemock/all: phony lib/libgmockd.a lib/libgmock_maind.a cpp/openvpn/test/unittests/googletest-build/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest
+
+build cpp/openvpn/test/unittests/googletest-build/googletest/all: phony lib/libgtestd.a lib/libgtest_maind.a
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/client/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/CMakeLists.txt.in /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/FindLZ4.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/dlgoogletest.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/findcoredeps.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/findswigdeps.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/mypragmaonce.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/openvpn/ovpnagent/mac/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/ovpncli/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/ssl/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/CMakeLists.txt /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCCompilerABI.c /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDependentOption.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeFindFrameworks.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeSystem.cmake.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CheckIncludeFile.c.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CheckIncludeFile.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CheckLibraryExists.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/AppleClang-C.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Clang.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindOpenSSL.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPkgConfig.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPython.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPython/Support.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPythonInterp.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPythonLibs.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindSWIG.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindThreads.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/GNUInstallDirs.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-Clang-C.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-Clang.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Darwin.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/UnixPaths.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/SelectLibraryConfigurations.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.0/CMakeCCompiler.cmake CMakeFiles/3.23.0/CMakeCXXCompiler.cmake CMakeFiles/3.23.0/CMakeSystem.cmake cpp/openvpn/test/unittests/googletest-src/CMakeLists.txt cpp/openvpn/test/unittests/googletest-src/googlemock/CMakeLists.txt cpp/openvpn/test/unittests/googletest-src/googlemock/cmake/gmock.pc.in cpp/openvpn/test/unittests/googletest-src/googlemock/cmake/gmock_main.pc.in cpp/openvpn/test/unittests/googletest-src/googletest/CMakeLists.txt cpp/openvpn/test/unittests/googletest-src/googletest/cmake/Config.cmake.in cpp/openvpn/test/unittests/googletest-src/googletest/cmake/gtest.pc.in cpp/openvpn/test/unittests/googletest-src/googletest/cmake/gtest_main.pc.in cpp/openvpn/test/unittests/googletest-src/googletest/cmake/internal_utils.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/client/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/CMakeLists.txt.in /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/FindLZ4.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/dlgoogletest.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/findcoredeps.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/findswigdeps.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/cmake/mypragmaonce.cmake /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/openvpn/ovpnagent/mac/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/ovpncli/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/ssl/CMakeLists.txt /Users/novyjpolzovatel/Desktop/vpndesktop/native-openvpn/cpp/openvpn/test/unittests/CMakeLists.txt /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCCompilerABI.c /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCXXCompiler.cmake.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDependentOption.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeFindFrameworks.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeSystem.cmake.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeTestCXXCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CheckIncludeFile.c.in /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CheckIncludeFile.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/CheckLibraryExists.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/AppleClang-C.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Clang.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindOpenSSL.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPkgConfig.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPython.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPython/Support.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPythonInterp.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindPythonLibs.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindSWIG.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/FindThreads.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/GNUInstallDirs.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-Clang-C.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Apple-Clang.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/Darwin.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/Platform/UnixPaths.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/SelectLibraryConfigurations.cmake /usr/local/Cellar/cmake/3.23.0/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.0/CMakeCCompiler.cmake CMakeFiles/3.23.0/CMakeCXXCompiler.cmake CMakeFiles/3.23.0/CMakeSystem.cmake cpp/openvpn/test/unittests/googletest-src/CMakeLists.txt cpp/openvpn/test/unittests/googletest-src/googlemock/CMakeLists.txt cpp/openvpn/test/unittests/googletest-src/googlemock/cmake/gmock.pc.in cpp/openvpn/test/unittests/googletest-src/googlemock/cmake/gmock_main.pc.in cpp/openvpn/test/unittests/googletest-src/googletest/CMakeLists.txt cpp/openvpn/test/unittests/googletest-src/googletest/cmake/Config.cmake.in cpp/openvpn/test/unittests/googletest-src/googletest/cmake/gtest.pc.in cpp/openvpn/test/unittests/googletest-src/googletest/cmake/gtest_main.pc.in cpp/openvpn/test/unittests/googletest-src/googletest/cmake/internal_utils.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

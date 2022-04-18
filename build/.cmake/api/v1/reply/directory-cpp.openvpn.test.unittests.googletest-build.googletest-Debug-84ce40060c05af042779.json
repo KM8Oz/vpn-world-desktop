@@ -1,0 +1,169 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"install_project"
+		],
+		"files" : 
+		[
+			"/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/CMakeLists.txt",
+			"/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/cmake/internal_utils.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 107,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 113,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 151,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 315,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 318,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 340,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 340,
+				"parent" : 3
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/GTest",
+			"exportName" : "GTestTargets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "gtest::@f8196fd4fd812ac802fb",
+					"index" : 4
+				},
+				{
+					"id" : "gtest_main::@f8196fd4fd812ac802fb",
+					"index" : 5
+				},
+				{
+					"id" : "gmock::@005419dd126e94883ebd",
+					"index" : 2
+				},
+				{
+					"id" : "gmock_main::@005419dd126e94883ebd",
+					"index" : 3
+				}
+			],
+			"paths" : 
+			[
+				"cpp/openvpn/test/unittests/googletest-build/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/GTest",
+			"paths" : 
+			[
+				"/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest/generated/GTestConfigVersion.cmake",
+				"/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest/generated/GTestConfig.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libgtestd.a"
+			],
+			"targetId" : "gtest::@f8196fd4fd812ac802fb",
+			"targetIndex" : 4,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libgtest_maind.a"
+			],
+			"targetId" : "gtest_main::@f8196fd4fd812ac802fb",
+			"targetIndex" : 5,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest/generated/gtest.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-build/googletest/generated/gtest_main.pc"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "cpp/openvpn/test/unittests/googletest-build/googletest",
+		"source" : "/Users/novyjpolzovatel/Desktop/vpndesktop/build/cpp/openvpn/test/unittests/googletest-src/googletest"
+	}
+}

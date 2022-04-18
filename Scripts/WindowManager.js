@@ -1,15 +1,16 @@
-const { app, BrowserWindow, Tray, nativeImage } = require('electron');
+const { app, BrowserWindow, Tray, Menu, session, protocol, nativeImage } = require('electron');
 const helper = require('./HelperFunctions.js');
-var sudo = require("sudo-prompt");
 const path = require('path');
-const child = require('child_process');
+const { sudoExec } = require("./sudo");
 const isDev = require('electron-is-dev');
+const { store } = require("./store")
 class WindowManager {
     constructor() {
         //Iconpaht different in Build
-        this.configpath = helper.isDev() ? '/Assets/client.ovpn' : path.join(process.resourcesPath, 'client.ovpn');
+        this.pid = null
+        this.configpath = helper.isDev() ? './Assets/client.ovpn' : path.join(process.resourcesPath, 'client.ovpn');
         this.binarypath = helper.isDev() ? './Assets/bin/sbin/openvpn' : path.join(process.resourcesPath, 'bin/sbin/openvpn');
-        this.sudopath = helper.isDev() ? './Assets/sudo/gksudo' : path.join(process.resourcesPath, 'sudo/gksudo');
+        // this.sudopath = helper.isDev() ? './Assets/sudo/gksudo' : path.join(process.resourcesPath, 'sudo/gksudo');
         let imgPath = helper.isDev() ? './Assets/Icon.png' : path.join(process.resourcesPath, 'Icon.png');
         this.icns = helper.isDev() ? './Assets/icno.icns' : path.join(process.resourcesPath, 'icno.icns')
         let imgPath1 = helper.isDev() ? './Assets/Icon1.png' : path.join(process.resourcesPath, 'Icon1.png');
@@ -17,14 +18,14 @@ class WindowManager {
         this.icon1 = nativeImage.createFromPath(imgPath1);
     }
     async connect() {
-       return await this.initializeit(this.binarypath, {
+        return await this.initializeit(this.binarypath, {
             host: 'vpn.oldidev.ru',
             port: 1194, // port should *always* be set at this point but we will defualt it anyway to 1337 just incase.
-            config:this.configpath
+            config: this.configpath
         })
     }
-    initializeit(binarypath,options){
-        return new Promise((resolve, reject)=>{
+    initializeit(binarypath, options) {
+        return new Promise((resolve, reject) => {
             var arg = [
                 '--proto-force',
                 'udp',
@@ -35,41 +36,37 @@ class WindowManager {
                 options.host,
                 options.port,
                 '--config',
-                "$(PWD)"+options.config,
+                options.config,
                 '--daemon', "vpnworld"
-              ];
-              var option = {
-                name: 'VPN WORLD',
-                icns: this.icns, // (optional)
-              };
-              try {
-                sudo.exec(binarypath+" "+arg.join(" "),option,
-                function(error, stdout, stderr) {
-                  if (error) reject(error);
-                  resolve('stdout: ' + stdout);
+            ];
+            // var option = {
+            //     name: 'VPN WORLD',
+            //     icns: this.icns, // (optional)
+            // };
+            try {
+                let res = sudoExec(binarypath + " " + arg.join(" "))
+                if (res) {
+                    // console.log(res.toString("utf-8"));
+                    this.pid = res.pid
+                    store.set("pid", res.pid)
+                    resolve(res)
+                   
                 }
-              )   
-              } catch (error) {
-                  reject(error)
-              }
+            } catch (err) {
+                reject(err);
+            }
         })
     }
-    disconnect(){
-        return new Promise((resolve, reject)=>{
-              var option = {
-                name: 'VPN WORLD',
-                icns: this.icns, // (optional)
-              };
-              try {
-                sudo.exec("killall openvpn",option,
-                function(error, stdout, stderr) {
-                  if (error) reject(error);
-                  resolve('stdout: ' + stdout);
+    disconnect() {
+        return new Promise((resolve, reject) => {
+            try {
+                let res = sudoExec("killall openvpn");
+                if (res) {
+                    resolve(res)
                 }
-              )   
-              } catch (error) {
-                  reject(error)
-              }
+            } catch (err) {
+                reject(err);
+            }
         })
     }
     //Creates a Tray and a Windows
@@ -91,13 +88,28 @@ class WindowManager {
 
     createTray() {
         this.tray = new Tray(this.icon);
+       
         this.tray.on('click', this.toggleWindowMain.bind(this));
-
+        const contextMenu = Menu.buildFromTemplate([
+            { label: 'close', type: 'normal', role:"quit" },
+          ])
+        this.tray.on("right-click", ()=>{
+            this.tray.popUpContextMenu(contextMenu)
+        });
+        //   tray.setToolTip('This is my application.')
+        // this.tray.setContextMenu(contextMenu)
         if (process.platform == "darwin")
             this.tray.setIgnoreDoubleClickEvents(true); //Better UX on MacOS
     }
 
     createMainWindow() {
+        // const partition = 'persist:vpn'
+        // const ses = session.fromPartition(partition)
+
+        // ses.protocol.registerFileProtocol('vpnw', (request, callback) => {
+        //     const url = request.url.substr(7)
+        //     callback({ path: path.normalize(`${__dirname}/${url}`) })
+        // })
         this.win = new BrowserWindow({
             width: 250,
             height: 435,
@@ -107,6 +119,7 @@ class WindowManager {
             movable: false,
             resizable: false,
             webPreferences: {
+                // partition,
                 contextIsolation: true,
                 preload: path.join(__dirname, 'preload.js'),
             },

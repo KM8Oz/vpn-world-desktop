@@ -10,7 +10,9 @@ const resources = {
       "contactus": "Связаться с нами",
       "termsCondi": "Правила и Условия",
       "connect": "Подключить",
-      "disconnect": "Отключить"
+      "disconnect": "Отключить",
+      "contact":"https://docs.google.com/forms/d/e/1FAIpQLSd9CbxCZlbu-c1142NsFME-vIo_JoMcYCwwiX5j7nqhQ9Pj5g/viewform",
+      "terms":"https://gist.githubusercontent.com/KM8Oz/a0d505e629967c71403f4675e67fbc4a/raw/241bedc4948b49f6997894a5e1d8e06ddf3b8324/VPNWORLDPRIVACY"
     }
   },
   en: {
@@ -18,7 +20,9 @@ const resources = {
         "contactus": "Contact Us",
         "termsCondi": "Terms & Conditions",
         "connect": "Connect",
-      "disconnect": "Disconnect"
+      "disconnect": "Disconnect",
+      "contact":"https://docs.google.com/forms/d/e/1FAIpQLSd9CbxCZlbu-c1142NsFME-vIo_JoMcYCwwiX5j7nqhQ9Pj5g/viewform",
+      "terms":"https://gist.githubusercontent.com/KM8Oz/a0d505e629967c71403f4675e67fbc4a/raw/241bedc4948b49f6997894a5e1d8e06ddf3b8324/VPNWORLDPRIVACY"
     }
   }
 };
