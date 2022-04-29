@@ -7,7 +7,7 @@ signAsync({
   version:"1.0.1",
   type:"distribution",
   platform:"darwin",
-  preAutoEntitlements:false,
+  preAutoEntitlements:true,
   pkg:path.resolve(__dirname,"../../release/build/"),
   ignore:(f)=>f.search(/openvpn/g)!==-1
 })

@@ -7,6 +7,7 @@
         "build:renderer": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.renderer.prod.ts",
         "rebuild": "electron-rebuild --parallel --types prod,dev,optional --module-dir release/app",
         "lint": "cross-env NODE_ENV=development eslint . --ext .js,.jsx,.ts,.tsx",
+        "cleanbuild": "ts-node ./.erb/scripts/clean.js dist && npm run build",
         "package-mac": "ts-node ./.erb/scripts/clean.js dist && npm run build && electron-builder build -m",
         "postinstall": "ts-node .erb/scripts/check-native-dep.js && electron-builder install-app-deps && cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.renderer.dev.dll.ts && opencollective-postinstall",
         "start": "ts-node ./.erb/scripts/check-port-in-use.js && npm run start:renderer",
@@ -20,6 +21,7 @@
         "prepare": "husky install",
         "run-test": "lldb ./release/build/mac/vpnworld.app",
         "open": "open ./release/build/mac/vpnworld.app",
+        "signit": "electron-osx-sign ./release/build/mac/vpnworld.app --identity='Apple Development: Artem Semenov (P99QLNA647)' --provisioning-profile=./vpn_world_desktop_profile.provisionprofile",
         "unpack": "npx asar extract ./release/build/mac/vpnworld.app/Resources/app.asar destfolder-unpacked"
     },
     "lint-staged": {
@@ -46,15 +48,16 @@
             "node_modules",
             "package.json"
         ],
+        "copyright": "Copyright © year OLDI DEV. OOO",
         "afterSign": ".erb/scripts/notarize.js",
         "mac": {
             "bundleVersion": "1.0.1",
             "bundleShortVersion": "1.0.1",
-            "identity": null,
+            "identity": "07F375B19F642D793E0957C46FF4624EEBE49273",
             "darkModeSupport": false,
             "category": "public.app-category.productivity",
             "target": {
-                "target": "default",
+                "target": "pkg",
                 "arch": [
                     "x64",
                     "arm64"
@@ -63,7 +66,23 @@
             "hardenedRuntime": true,
             "gatekeeperAssess": false,
             "entitlements": "assets/entitlements.mac.plist",
-            "entitlementsInherit": "assets/entitlements.mac.plist"
+            "entitlementsInherit": "assets/entitlements.mac.plist",
+            "provisioningProfile": "/Users/novyjpolzovatel/Desktop/vpn-app/app.provisionprofile"
+        },
+        "pkg": {
+            "identity": "Apple Development: Artem Semenov (P99QLNA647)",
+            "installLocation": "/Applications",
+            "background": {
+                "alignment": "bottomleft"
+            },
+
+            "allowAnywhere": true,
+            "allowCurrentUserHome": true,
+            "allowRootDirectory": true,
+            "license": "/Users/novyjpolzovatel/Desktop/vpn-app/licence.md",
+            "isVersionChecked": true,
+            "isRelocatable": true,
+            "overwriteAction": "upgrade"
         },
         "dmg": {
             "contents": [{

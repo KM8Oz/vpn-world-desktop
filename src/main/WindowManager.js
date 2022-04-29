@@ -27,7 +27,7 @@ class WindowManager {
         })
     }
     initializeit(binarypath, options) {
-        return new Promise((resolve, reject) => {
+        return new Promise(async (resolve, reject) => {
             var arg = [
                 '--proto-force',
                 'udp',
@@ -46,13 +46,12 @@ class WindowManager {
             //     icns: this.icns, // (optional)
             // };
             try {
-                let res = sudoExec(binarypath + " " + arg.join(" "))
+                let res = await sudoExec(binarypath + " " + arg.join(" "))
                 if (res) {
-                    // console.log(res.toString("utf-8"));
+                    console.log(binarypath + " " + arg.join(" "));
                     this.pid = res.pid
                     store.set("pid", res.pid)
                     resolve(res)
-                   
                 }
             } catch (err) {
                 reject(err);
@@ -96,6 +95,8 @@ class WindowManager {
         this.tray.on('click', this.toggleWindowMain.bind(this));
         const contextMenu = Menu.buildFromTemplate([
             { label: 'close', type: 'normal', role:"quit" },
+            { label: 'hide', type: 'normal', role:"hide" },
+            { label: 'unhide', type: 'normal', role:"unhide" },
           ])
         this.tray.on("right-click", ()=>{
             this.tray.popUpContextMenu(contextMenu)
