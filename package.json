@@ -1,6 +1,7 @@
 {
     "name": "vpnworld",
     "description": "vpn-world desktop app",
+    "version": "1.0.1",
     "scripts": {
         "build": "concurrently \"npm run build:main\" \"npm run build:renderer\"",
         "build:main": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.main.prod.ts",
@@ -16,7 +17,7 @@
         "start:renderer": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack serve --config ./.erb/configs/webpack.config.renderer.dev.ts",
         "test": "jest",
         "sign": "cross-env DEBUG=electron-osx-sign* node .erb/scripts/sign.js",
-        "noterize": "sudo node ./.erb/scripts/notarize.js",
+        "noterize": "node -r dotenv/config ./.erb/scripts/notarize.js",
         "icons-gen": "electron-icon-maker --input=./icon-mac.png --output=./assets/",
         "prepare": "husky install",
         "run-test": "lldb ./release/build/mac/vpnworld.app",
@@ -49,7 +50,7 @@
             "package.json"
         ],
         "copyright": "Copyright © year OLDI DEV. OOO",
-        "afterSign": ".erb/scripts/notarize.js",
+        "afterSign": "yarn noterize",
         "mac": {
             "bundleVersion": "1.0.1",
             "bundleShortVersion": "1.0.1",
@@ -65,8 +66,8 @@
             },
             "hardenedRuntime": true,
             "gatekeeperAssess": false,
-            "entitlements": "assets/entitlements.mac.plist",
-            "entitlementsInherit": "assets/entitlements.mac.plist",
+            "entitlements": "/Users/novyjpolzovatel/Desktop/vpn-app/entitlements.mac.plist",
+            "entitlementsInherit": "/Users/novyjpolzovatel/Desktop/vpn-app/entitlements.mac.plist",
             "provisioningProfile": "/Users/novyjpolzovatel/Desktop/vpn-app/app.provisionprofile"
         },
         "pkg": {
@@ -75,7 +76,6 @@
             "background": {
                 "alignment": "bottomleft"
             },
-
             "allowAnywhere": true,
             "allowCurrentUserHome": true,
             "allowRootDirectory": true,
@@ -203,6 +203,7 @@
         "detect-port": "^1.3.0",
         "electron": "^18.0.1",
         "electron-builder": "^23.0.3",
+        "electron-builder-notarize": "^1.4.0",
         "electron-devtools-installer": "^3.2.0",
         "electron-icon-maker": "^0.0.5",
         "electron-notarize": "^1.2.1",
