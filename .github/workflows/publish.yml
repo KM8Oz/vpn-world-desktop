@@ -22,9 +22,9 @@ jobs:
         with:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
-          mac_certs: ${{ secrets.mac_certs }}
-          mac_certs_password: ${{ secrets.mac_certs_password }}
-          github_token: ${{ secrets.github_token }}
+          mac_certs: ${{ secrets.MAC_CERTS }}
+          mac_certs_password: ${{ secrets.MAC_CERTS_PASSWORD }}
+          github_token: ${{ secrets.TOKEN }}
           build_script_name: cleanbuild
           args: -m
           # If the commit is tagged with a version (e.g. "v1.0.0"),

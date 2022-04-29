@@ -14,5 +14,7 @@
     <array>
       <string>MVY72CHU7M.dev.oldi.apps.vpn</string>
     </array>
+    <key>com.apple.security.cs.allow-dyld-environment-variables</key>
+		<true/>
   </dict>
 </plist>
