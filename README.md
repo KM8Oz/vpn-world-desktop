@@ -1,7 +1,1 @@
 # vpn world
-xcrun altool --notarize-app --primary-bundle-id "dev.oldi.vpndesktop" --username "artemsem007@yandex.ru" --password "Master93ru" --asc-provider MVY72CHU7M --file ./release/build/vpnworld-4.5.0.pkg
-codesign --force --deep -s "Apple Development: Artem Semenov (P99QLNA647)"
-
-security find-identity -vp codesigning
-
-{ appId?, artifactName?, asar?, asarUnpack?, binaries?, bundleShortVersion?, bundleVersion?, category?, compression?, cscInstallerKeyPassword?, cscInstallerLink?, cscKeyPassword?, cscLink?, darkModeSupport?, defaultArch?, detectUpdateChannel?, electronLanguages?, electronUpdaterCompatibility?, entitlements?, entitlementsInherit?, entitlementsLoginHelper?, executableName?, extendInfo?, extraDistFiles?, extraFiles?, extraResources?, fileAssociations?, files?, forceCodeSigning?, gatekeeperAssess?, generateUpdatesFilesForAllChannels?, hardenedRuntime?, helperBundleId?, helperEHBundleId?, helperGPUBundleId?, helperNPBundleId?, helperPluginBundleId?, helperRendererBundleId?, icon?, identity?, mergeASARs?, minimumSystemVersion?, protocols?, provisioningProfile?, publish?, releaseInfo?, requirements?, signIgnore?, singleArchFiles?, strictVerify?, target?, timestamp?, type? }
