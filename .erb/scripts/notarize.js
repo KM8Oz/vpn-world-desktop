@@ -1,16 +1,16 @@
 const { notarize } = require('electron-notarize');
 const { build } = require('../../package.json');
-
+require('dotenv').config()
 exports.default = async function notarizeMacos(context) {
   const { electronPlatformName, appOutDir } = context;
   if (electronPlatformName !== 'darwin') {
     return;
   }
 
-  if (process.env.CI !== 'true') {
-    console.warn('Skipping notarizing step. Packaging is not running in CI');
-    return;
-  }
+  // if (process.env.CI !== 'true') {
+  //   console.warn('Skipping notarizing step. Packaging is not running in CI');
+  //   return;
+  // }
 
   if (!('APPLE_ID' in process.env && 'APPLE_ID_PASS' in process.env)) {
     console.warn(
@@ -24,7 +24,12 @@ exports.default = async function notarizeMacos(context) {
   await notarize({
     appBundleId: build.appId,
     appPath: `${appOutDir}/${appName}.app`,
-    appleId: process.env.APPLE_ID || "artemsem007@yandex.ru",
-    appleIdPassword: process.env.APPLE_ID_PASS || "Master93ru",
+    appleId: process.env.APPLE_ID,
+    appleIdPassword: process.env.APPLE_ID_PASS,
+    // appleApiIssuer: process.env.API_KEY_ISSUER_ID,
+    // appleApiKeyId: process.env.API_KEY_ID,
+    ascProvider:process.env.PROVIDER,
+    teamId:process.env.PROVIDER
+    // appleApiKey: process.env.API_KEY,
   });
 };

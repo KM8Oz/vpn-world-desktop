@@ -1,7 +1,6 @@
 {
     "name": "vpnworld",
     "description": "vpn-world desktop app",
-    "version": "1.0.1",
     "scripts": {
         "build": "concurrently \"npm run build:main\" \"npm run build:renderer\"",
         "build:main": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.main.prod.ts",
@@ -10,6 +9,7 @@
         "lint": "cross-env NODE_ENV=development eslint . --ext .js,.jsx,.ts,.tsx",
         "cleanbuild": "ts-node ./.erb/scripts/clean.js dist && npm run build",
         "package-mac": "ts-node ./.erb/scripts/clean.js dist && npm run build && electron-builder build -m",
+        "publish-mac": "ts-node ./.erb/scripts/clean.js dist && npm run build && electron-builder build --publish always",
         "postinstall": "ts-node .erb/scripts/check-native-dep.js && electron-builder install-app-deps && cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.renderer.dev.dll.ts && opencollective-postinstall",
         "start": "ts-node ./.erb/scripts/check-port-in-use.js && npm run start:renderer",
         "start:main": "cross-env NODE_ENV=development electronmon -r ts-node/register/transpile-only ./src/main/main.ts",
@@ -17,7 +17,7 @@
         "start:renderer": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack serve --config ./.erb/configs/webpack.config.renderer.dev.ts",
         "test": "jest",
         "sign": "cross-env DEBUG=electron-osx-sign* node .erb/scripts/sign.js",
-        "noterize": "node -r dotenv/config ./.erb/scripts/notarize.js",
+        "noterize": "sudo node ./.erb/scripts/notarize.js",
         "icons-gen": "electron-icon-maker --input=./icon-mac.png --output=./assets/",
         "prepare": "husky install",
         "run-test": "lldb ./release/build/mac/vpnworld.app",
@@ -50,11 +50,11 @@
             "package.json"
         ],
         "copyright": "Copyright © year OLDI DEV. OOO",
-        "afterSign": "yarn noterize",
+        "afterSign": ".erb/scripts/notarize.js",
         "mac": {
             "bundleVersion": "1.0.1",
             "bundleShortVersion": "1.0.1",
-            "identity": "07F375B19F642D793E0957C46FF4624EEBE49273",
+            "identity": "906FA15ED30F2FEF7B58610652117DCF0BB3A99E",
             "darkModeSupport": false,
             "category": "public.app-category.productivity",
             "target": {
@@ -66,12 +66,20 @@
             },
             "hardenedRuntime": true,
             "gatekeeperAssess": false,
-            "entitlements": "/Users/novyjpolzovatel/Desktop/vpn-app/entitlements.mac.plist",
-            "entitlementsInherit": "/Users/novyjpolzovatel/Desktop/vpn-app/entitlements.mac.plist",
+            "helperEHBundleId": "dev.oldi.apps.vpn.helperEH",
+            "helperBundleId": "dev.oldi.apps.vpn.helper",
+            "helperGPUBundleId": "dev.oldi.apps.vpn.helperGPU",
+            "helperNPBundleId": "dev.oldi.apps.vpn.helperPlugin",
+            "helperPluginBundleId": "dev.oldi.apps.vpn.helperRenderer",
+            "helperRendererBundleId": "dev.oldi.apps.vpn",
+            "forceCodeSigning": true,
+            "entitlements": "entitlements.mac.plist",
+            "entitlementsInherit": "entitlements.mac.plist",
+            "type": "distribution",
             "provisioningProfile": "/Users/novyjpolzovatel/Desktop/vpn-app/app.provisionprofile"
         },
         "pkg": {
-            "identity": "Apple Development: Artem Semenov (P99QLNA647)",
+            "identity": "BCB0A673AF78ABB64B48F208035AEE994A766CAD",
             "installLocation": "/Applications",
             "background": {
                 "alignment": "bottomleft"
@@ -119,7 +127,7 @@
         "publish": {
             "provider": "github",
             "owner": "km8oz",
-            "repo": "vpn-app"
+            "repo": "vpn-world-desktop"
         }
     },
     "repository": {
@@ -203,7 +211,6 @@
         "detect-port": "^1.3.0",
         "electron": "^18.0.1",
         "electron-builder": "^23.0.3",
-        "electron-builder-notarize": "^1.4.0",
         "electron-devtools-installer": "^3.2.0",
         "electron-icon-maker": "^0.0.5",
         "electron-notarize": "^1.2.1",
@@ -250,6 +257,7 @@
         "webpack-merge": "^5.8.0"
     },
     "dependencies": {
+        "dotenv": "^16.0.0",
         "electron-debug": "^3.2.0",
         "electron-log": "^4.4.6",
         "electron-store": "^8.0.1",

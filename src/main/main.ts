@@ -1,6 +1,8 @@
 import { app, ipcMain } from 'electron';
 import WindowManager from './WindowManager';
 import { shell } from 'electron';
+const { autoUpdater } = require('electron-updater')
+require('dotenv').config()
 //Main Object responsible for managing the electron windows is created
 var windowManager = new WindowManager();
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
@@ -13,7 +15,7 @@ app.on('window-all-closed', () => {
         app.quit()
     }
 })
-
+autoUpdater.addAuthHeader(`License ${process.env.key}`)
 ipcMain.on('exit', (_event) => app.quit());
 ipcMain.on("openlink", async (_event, ...arg)=>{
     if(arg[0]){
